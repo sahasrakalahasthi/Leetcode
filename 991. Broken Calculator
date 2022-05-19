@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int brokenCalc(int startValue, int target) {
+        int count=0;
+        while(startValue<target){
+           if(target%2==0)
+           {
+               target/=2;
+               count++;
+           }
+            else
+            {
+                target=target+1;//4
+                count++;//1
+            }
+}
+         return count+(startValue-target);//again to while condition
+    }
+};
