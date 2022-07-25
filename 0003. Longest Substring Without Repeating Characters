@@ -1,0 +1,31 @@
+class Solution {
+public:
+    int maxi(int a,int b){
+        if(a>b){
+            return a;
+        }
+        else{
+            return b;
+        }
+    }
+public:
+    int lengthOfLongestSubstring(string s) {
+        int max=0;
+        int i=0,j=0;
+        set<char>Set1;
+        while(j<s.length() && i<s.length()){
+            if(Set1.count(s[j]))
+            {
+                Set1.erase(s[i]);
+                i=i+1;
+            }
+           else
+             {
+                Set1.insert(s[j]);
+                j=j+1;
+                max=maxi(j-i,max);   
+             }
+        }
+        return max;
+    }
+};
