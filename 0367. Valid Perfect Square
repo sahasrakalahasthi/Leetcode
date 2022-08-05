@@ -1,0 +1,4 @@
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        root=sqrt(num)
+        return (int(root+0.5)**2)==num
