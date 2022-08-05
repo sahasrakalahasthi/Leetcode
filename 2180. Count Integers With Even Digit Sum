@@ -1,0 +1,13 @@
+class Solution:
+    def countEven(self, num: int) -> int:
+        count=0
+        for n in range(1,num+1):
+            sum=rem=0
+            while n>0:
+                rem=n%10
+                sum+=rem
+                n=n//10
+            if sum%2==0:
+                count+=1
+                
+        return count
