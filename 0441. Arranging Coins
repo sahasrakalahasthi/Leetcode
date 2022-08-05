@@ -1,0 +1,9 @@
+class Solution:
+    def arrangeCoins(self, n: int) -> int:
+        row=0
+        i=1
+        while n>=i:
+            n=n-i
+            row+=1
+            i+=1
+        return row
