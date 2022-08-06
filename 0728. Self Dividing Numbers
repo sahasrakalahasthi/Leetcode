@@ -1,0 +1,15 @@
+class Solution:
+    def selfDividingNumbers(self, left: int, right: int) -> List[int]:
+        res=[]
+        for val in range(left,right+1):
+            num=val
+            ans=True
+            while num:
+                mod=num%10
+                if mod==0 or val%mod!=0:
+                    ans=False
+                    break
+                num=num//10
+            if ans:
+                res.append(val)
+        return res
